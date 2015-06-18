@@ -1,7 +1,7 @@
 # flyd-onAnimationFrame
 
 [![Travis](https://img.shields.io/travis/ThomWright/flyd-onAnimationFrame.svg?style=flat-square)](https://travis-ci.org/ThomWright/flyd-onAnimationFrame)
-[![npm](https://img.shields.io/npm/v/flyd-onAnimationFrame.svg?style=flat-square)](https://www.npmjs.com/package/flyd-onAnimationFrame)
+[![npm](https://img.shields.io/npm/v/flyd-onanimationframe.svg?style=flat-square)](https://www.npmjs.com/package/flyd-onanimationframe)
 [![David](https://img.shields.io/david/ThomWright/flyd-onAnimationFrame.svg?style=flat-square)](https://david-dm.org/ThomWright/flyd-onAnimationFrame)
 [![David](https://img.shields.io/david/dev/ThomWright/flyd-onAnimationFrame.svg?style=flat-square)](https://david-dm.org/ThomWright/flyd-onAnimationFrame#info=devDependencies)
 
