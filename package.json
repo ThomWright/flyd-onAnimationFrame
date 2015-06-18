@@ -33,8 +33,8 @@
     "babel": "^5.4.7",
     "babel-eslint": "^3.1.9",
     "babel-runtime": "^5.4.7",
-    "chai": "^2.3.0",
-    "eslint": "^0.22.1",
+    "chai": "^3",
+    "eslint": "^0",
     "eslint-plugin-react": "^2.3.0",
     "mocha": "^2.2.5",
     "rimraf": "^2.3.4"
