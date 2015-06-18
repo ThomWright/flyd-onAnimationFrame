@@ -74,7 +74,7 @@ describe('onAnimationFrame', function() {
     });
 
     [...range(1, LIMIT)]
-      .map(n => ({n: n}))
+      .map(n => ({n}))
       .forEach((n) => stream(n));
   });
 });
