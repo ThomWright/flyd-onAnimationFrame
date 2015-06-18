@@ -1,4 +1,10 @@
 # flyd-animationFrame
+
+[![Travis](https://img.shields.io/travis/ThomWright/flyd-animationFrame.svg?style=flat-square)](https://travis-ci.org/ThomWright/flyd-animationFrame)
+[![npm](https://img.shields.io/npm/v/flyd-animationFrame.svg?style=flat-square)](https://www.npmjs.com/package/flyd-animationFrame)
+[![David](https://img.shields.io/david/ThomWright/flyd-animationFrame.svg?style=flat-square)](https://david-dm.org/ThomWright/flyd-animationFrame)
+[![David](https://img.shields.io/david/dev/ThomWright/flyd-animationFrame.svg?style=flat-square)](https://david-dm.org/ThomWright/flyd-animationFrame#info=devDependencies)
+
 Emits values on successive animation frames.
 
 **Signature**
