@@ -2,12 +2,12 @@ language: node_js
 node_js:
 - '0.12'
 - '0.10'
-sudo: false # use container-based architecture; starts up faster
+sudo: false
 deploy:
   provider: npm
   email: npm@thomwright.co.uk
   api_key:
-    secure: tnVaNC+H/wajeAyTko1Hwsx3V/KkQ1hfloG0ntUpgxqgfpi9GxKt1yAF7LYWnn2acOXlGr17tohsSi3k9ocX1V+gcBM27WJ7vNtKbChypQIdUGVoXVfvnQBoTWXEQyuEgQDCUrE/l50sKZN/0Wk6PamAimS14MY0ilqZkyPNIPYHuOvwYzcBCjSkOH23UG8Q/CLIaLDK4HHZte28/La7HLZrC/6ZIN+rEz7DGMnDnoXAaN19YbIs7TjHCOlO40xOWGmoQlagkdYPzj9tx/rHKu1JbxJlYQ2wGKqgXQ5I5PdwFR1ESm2fNf34MTgeH9bHqZzrGMG85v6JdYNfkL0VsQNMgs9+qO2GLk33fHPo6aIcHLflOPTmgvEKUeZ+r4PLPkLvrMcMEndoYO57vkc62UcFg1LalVIKgvWSrGB5N1DNdQ28THtiZRzC+W2E1CBwkh0AFJ7nUPmMo+DPbQCYx+DSbBlHZQKfFEt6xu1qX4apJ3gVb5NNGdUJjvRNQcE2ppH7QIRz5WoYOEWODWwLvtF/DxJdskXdOOk0wIvDnA9eS0MLbGNy8wRxy6pJRsI525CAFysBA4zpa1Xc1/B61m5BCHnPVDxELL+JgJ/YLFRJk8GWW/sERung2nZUuAGYZ14xM8p2yPR3Ob66rDNg64Sey7IzJMkqH3NaBAT8L1k=
+    secure: SF7zwhmQJC51wnT8OfFwJwTMioh1F/BlBnNind/89iOe75qnrW2K8j6NNxPIM/POVMPLk8/t4qVa12G/xdBbP8gj/fwfmOemTE0A/LiWl+i+BZvo8Ft11Un+gqN3c9Dm7HI8uGmOnyXitbpCGCMqlWA0Ktyyb+99PYD2I+VpNwXFC+IQWW1IqjR+fbyajzVIB8FlB5l/tz/vzPRxSu6IVpAqpY65vOYRacnM/hIwfSwVoOfptPAdGRVyMqK5DBqSiGOvaHDeEoKavb1NYUJA+JJfpC0pGhC5rFxiTydOc3gzqoCpCTD+RoEnHFUScs6YeEDyGqZFU/yJf5QcNLVteZfs+JLtz4OgwCDZrciVN9PCoii8NU70QUOTdIxbBwoXy+9t6CiFKDp6rWswCP/Bby9SxjrYYljjmShuWjEh/reSoGIRQa3iYSR2lHTwJIKr+LlV35OIKGXRCrbG8P3Xoz0viQ1rJv/VmT0wkM2peQ0hdRBU3FoLRjULQ9xHty8h68+xi1NZQNuTdVLgopVlm9lJA6xreooENP3Dnzwy+ipg6Ogml8yEFWgK+J38ez53Rinnp/Dl4tmW4TTt6XykOvCmHZsWl5d6n/davoIu9qxUGgKaiySNA/HIL8C+DWMuXeuhv8IFFqoBMHRzspR5DBqOXaYhriu4A/Zz5EWvOGM=
   on:
     tags: true
     repo: ThomWright/flyd-onAnimationFrame
