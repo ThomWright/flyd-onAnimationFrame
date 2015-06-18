@@ -69,7 +69,7 @@ describe('onAnimationFrame', function() {
         const n = onFrame().n;
         x = n;
         // if the callbacks were synchronous, then x would change again before nextTick
-        process.nextTick(() => console.log(x), expect(x).to.equal(n));
+        process.nextTick(() => expect(x).to.equal(n));
       }
     });
 
