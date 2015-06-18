@@ -15,12 +15,12 @@ flyd.map(function(x) {
 }, onFrame);
 
 [1, 2, 3, 4, 5]
-  .map(n => ({n: n.toString()}))
+  .map(n => ({n}))
   .forEach((n) => stream(n));
 
-// Output { time: 1434644236891, n: '1' }
-// Output { time: 1434644236908, n: '2' }
-// Output { time: 1434644236924, n: '3' }
-// Output { time: 1434644236940, n: '4' }
-// Output { time: 1434644236956, n: '5' }
+// Output { time: 1434644236891, n: 1 }
+// Output { time: 1434644236908, n: 2 }
+// Output { time: 1434644236924, n: 3 }
+// Output { time: 1434644236940, n: 4 }
+// Output { time: 1434644236956, n: 5 }
 ```
