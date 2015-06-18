@@ -63,11 +63,11 @@ describe('onAnimationFrame', function() {
     let x = 0;
 
     flyd.stream([onFrame], () => {
-      if (x === LIMIT) {
+      const n = onFrame().n;
+      x = n;
+      if (n === LIMIT) {
         done();
       } else {
-        const n = onFrame().n;
-        x = n;
         // if the callbacks were synchronous, then x would change again before nextTick
         process.nextTick(() => expect(x).to.equal(n));
       }
