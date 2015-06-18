@@ -22,20 +22,18 @@ export default function(inputStream) {
   const q = [];
   const requestFrame = requester();
 
-  const callbackFor = outputStream => (time) => {
-    const o = Object.assign({
-      time
-    }, q.shift());
+  const forCallbackWith = outputStream => (time) => {
+    const o = Object.assign({time}, q.shift());
 
     if (q.length > 0) {
-      requestFrame(callbackFor(outputStream));
+      requestFrame(forCallbackWith(outputStream));
     }
 
     outputStream(o);
   };
 
-  return flyd.stream([inputStream], (output) => {
+  return flyd.stream([inputStream], (outputStream) => {
     q.push(inputStream());
-    requestFrame.ifNotInProgress(callbackFor(output));
+    requestFrame.ifNotInProgress(forCallbackWith(outputStream));
   });
 }
