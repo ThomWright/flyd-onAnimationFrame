@@ -10,13 +10,14 @@ Emits values on successive animation frames.
 ```javascript
 const stream = flyd.stream();
 const onFrame = onAnimationFrame(stream);
+
 flyd.map(function(x) {
   console.log('Output', x);
 }, onFrame);
 
 [1, 2, 3, 4, 5]
   .map(n => ({n}))
-  .forEach((n) => stream(n));
+  .forEach(n => stream(n));
 
 // Output { time: 1434644236891, n: 1 }
 // Output { time: 1434644236908, n: 2 }
