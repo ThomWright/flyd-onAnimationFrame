@@ -1,5 +1,5 @@
 {
-  "name": "flyd-animationFrame",
+  "name": "flyd-onAnimationFrame",
   "version": "0.1.0",
   "description": "Emits values on successive animation frames.",
   "main": "dist/onAnimationFrame.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ThomWright/flyd-animationFrame"
+    "url": "https://github.com/ThomWright/flyd-onAnimationFrame"
   },
   "keywords": [
     "requestAnimationFrame",
@@ -22,9 +22,9 @@
   "author": "Thom Wright <npm@thomwright.co.uk> (http://thomwright.co.uk/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ThomWright/flyd-animationFrame/issues"
+    "url": "https://github.com/ThomWright/flyd-onAnimationFrame/issues"
   },
-  "homepage": "https://github.com/ThomWright/flyd-animationFrame",
+  "homepage": "https://github.com/ThomWright/flyd-onAnimationFrame",
   "dependencies": {
     "flyd": "^0",
     "raf": "^3.0.0"
