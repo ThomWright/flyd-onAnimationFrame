@@ -1,11 +1,11 @@
 /*global describe*/
 /*global it*/
-/*global before*/
+/*global beforeEach*/
 // /*global afterEach*/
 /*global expect*/
 
-var flyd = require('flyd');
-var onAnimationFrame = require('../onAnimationFrame.js');
+import flyd from 'flyd';
+import onAnimationFrame from '../onAnimationFrame.js';
 
 // const stream = flyd.stream();
 // const onFrame = onAnimationFrame(stream);
@@ -17,11 +17,19 @@ var onAnimationFrame = require('../onAnimationFrame.js');
 //   .map(n => ({n: n.toString()}))
 //   .forEach((n) => stream(n));
 
+function* range(low, high) {
+  var i = low;
+  while(i <= high) {
+    yield i++;
+  }
+}
+
+
 describe('onAnimationFrame', function() {
 
   let stream, onFrame;
 
-  before(() => {
+  beforeEach(() => {
     stream = flyd.stream();
     onFrame = onAnimationFrame(stream);
   });
@@ -37,7 +45,36 @@ describe('onAnimationFrame', function() {
     stream({value});
   });
 
-  it('ends', function(done) {
-    done();
+  it('should be asynchronous', function(done) {
+    let x = 0;
+
+    flyd.stream([onFrame], () => {
+      x = 1;
+      // using done makes sure that the callback actually happens
+      done();
+    });
+
+    stream({});
+    expect(x).to.equal(0); // if it was synchronous, then the callback would have changed x
+  });
+
+  it('should be async every time', function(done) {
+    const LIMIT = 5;
+    let x = 0;
+
+    flyd.stream([onFrame], () => {
+      if (x === LIMIT) {
+        done();
+      } else {
+        const n = onFrame().n;
+        x = n;
+        // if the callbacks were synchronous, then x would change again before nextTick
+        process.nextTick(() => console.log(x), expect(x).to.equal(n));
+      }
+    });
+
+    [...range(1, LIMIT)]
+      .map(n => ({n: n}))
+      .forEach((n) => stream(n));
   });
 });
