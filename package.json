@@ -1,6 +1,6 @@
 {
   "name": "flyd-onanimationframe",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Emits values on successive animation frames.",
   "main": "dist/onAnimationFrame.js",
   "scripts": {
