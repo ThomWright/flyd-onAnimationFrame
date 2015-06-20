@@ -18,16 +18,16 @@ const stream = flyd.stream();
 const onFrame = onAnimationFrame(stream);
 
 flyd.map(function(x) {
-  console.log('Output', x);
+  console.log('Time/Output', Date.now(), x);
 }, onFrame);
 
 [1, 2, 3, 4, 5]
-  .map(n => ({n}))
   .forEach(n => stream(n));
 
-// Output { time: 1434644236891, n: 1 }
-// Output { time: 1434644236908, n: 2 }
-// Output { time: 1434644236924, n: 3 }
-// Output { time: 1434644236940, n: 4 }
-// Output { time: 1434644236956, n: 5 }
+// Time/Output 1434813866911 1
+// Time/Output 1434813866927 2
+// Time/Output 1434813866943 3
+// Time/Output 1434813866961 4
+// Time/Output 1434813866977 5
+
 ```
