@@ -7,7 +7,7 @@ const requester = function() {
   const request = callback => {
     handle = raf(() => {
       reset();
-      callback(Date.now());
+      callback();
     });
   };
   request.ifNotInProgress = callback => {
@@ -22,8 +22,8 @@ export default function(inputStream) {
   const q = [];
   const requestFrame = requester();
 
-  const forCallbackWith = outputStream => (time) => {
-    const o = Object.assign({time}, q.shift());
+  const forCallbackWith = outputStream => () => {
+    const o = q.shift();
 
     if (q.length > 0) {
       requestFrame(forCallbackWith(outputStream));

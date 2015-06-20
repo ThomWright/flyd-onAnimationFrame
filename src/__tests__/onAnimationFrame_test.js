@@ -24,7 +24,6 @@ function* range(low, high) {
   }
 }
 
-
 describe('onAnimationFrame', function() {
 
   let stream, onFrame;
@@ -38,11 +37,11 @@ describe('onAnimationFrame', function() {
     const value = 0;
 
     flyd.stream([onFrame], () => {
-      expect(onFrame().value).to.equal(value);
+      expect(onFrame()).to.equal(value);
       done();
     });
 
-    stream({value});
+    stream(value);
   });
 
   it('should be asynchronous', function(done) {
