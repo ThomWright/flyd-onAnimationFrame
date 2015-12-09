@@ -32,8 +32,8 @@ export default function(inputStream) {
     outputStream(o);
   };
 
-  return flyd.stream([inputStream], (outputStream) => {
-    q.push(inputStream());
+  return flyd.combine((input, outputStream) => {
+    q.push(input());
     requestFrame.ifNotInProgress(forCallbackWith(outputStream));
-  });
+  }, [inputStream]);
 }
